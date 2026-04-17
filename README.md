@@ -1,5 +1,5 @@
 # NewKernelBench
-
+as well as Kernel Bench in Wild , KBWv2, which is second version of Wild Kernel Bench...
 `NewKernelBench` is a benchmark and diagnosis workspace for LLM-driven kernel generation. It starts from the original `KernelBench` task set, adds a richer planning layer, and pushes toward a more realistic evaluation loop for real workloads.
 
 ## What is new compared with the original KernelBench
