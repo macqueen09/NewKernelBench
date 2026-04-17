@@ -72,3 +72,31 @@ Once the repository is initialized and committed, VSCode Remote can already show
 - line-level diffs against the last commit
 
 GitHub is only needed for remote backup and sync, not for local diff visibility.
+
+## Recommended branch workflow
+
+For regular updates, a cleaner flow than pushing directly to `main` is:
+
+1. sync `main`
+2. create a short-lived feature branch
+3. commit small focused changes on that branch
+4. push the branch to GitHub
+5. open a pull request into `main`
+6. review the diff in GitHub or VSCode
+7. merge with squash merge if the branch contains one logical change
+
+Example commands:
+
+```bash
+cd /supercloud/llm-code/mkl/project/clang/KernelGen/NewKernelBench
+git checkout main
+git pull --ff-only origin main
+git checkout -b macqueen/my-change
+# edit files
+git add -A
+git commit -m "Describe the change"
+git push -u origin macqueen/my-change
+```
+
+This keeps `main` stable and makes later file-by-file review much easier.
+
