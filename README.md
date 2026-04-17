@@ -56,15 +56,6 @@ NewKernelBench/
   profile_runs/
 ```
 
-## Verified environment
-
-The current validated execution path is:
-
-- remote machine: `192.168.17.171`
-- conda env: `aikg`
-- GPU policy: `CUDA_VISIBLE_DEVICES=1`
-- visible runtime device during validation: `NVIDIA H800`
-
 ## Encoding policy
 
 All text files in this project should use UTF-8:
